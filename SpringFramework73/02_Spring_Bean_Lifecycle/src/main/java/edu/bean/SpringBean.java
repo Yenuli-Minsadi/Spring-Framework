@@ -4,9 +4,11 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //@Component
+@Scope("prototype")
 public class SpringBean implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, DisposableBean, InitializingBean {
     public SpringBean() {
         System.out.println("Spring Bean cretated");
