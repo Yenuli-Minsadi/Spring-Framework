@@ -1,5 +1,6 @@
 package edu;
 
+import edu.bean.MyConnection;
 import edu.bean.SpringBean;
 import edu.bean.TestBean;
 import edu.config.AppConfig;
@@ -33,6 +34,9 @@ public class AppInitializer {
 
         NewTestBean newTestBean = context.getBean(NewTestBean.class);
         System.out.println("NewTestBean : "+newTestBean);
+
+        MyConnection myConnection = (MyConnection) context.getBean("connection");
+        System.out.println("MyConnection : "+myConnection);
 
 
 
