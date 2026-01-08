@@ -14,8 +14,8 @@ public class AppInitializer {
 
         SpringBean springBean = context.getBean(SpringBean.class);
         System.out.println(springBean);
-        
 
-        context.registerShutdownHook();
+
+        context.registerShutdownHook();//if this is gone the beans will stay without destroying
     }
 }
