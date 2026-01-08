@@ -7,4 +7,8 @@ public class TestBean {
     public TestBean() {
         System.out.println("TestBean created");
     }
+
+    public void printMessage() {
+        System.out.println("Print meth");
+    }
 }

@@ -15,8 +15,21 @@ public class AppInitializer {
         SpringBean springBean = (SpringBean) context.getBean("springBean");//bean id is made by SpringBean cls eke 1st letter ek simple wela
         System.out.println("Bean : "+springBean);
 
+        //by class name
+        SpringBean springBean2 = context.getBean(SpringBean.class);//bean id is made by SpringBean cls eke 1st letter ek simple wela
+        System.out.println("Bean : "+springBean2);
+
+        //by changing bean id
         TestBean testBean = (TestBean) context.getBean("exampleBean");
         System.out.println("Bean1 : "+testBean);
+
+        //by bean id and class name
+        TestBean testBean1 = context.getBean("exampleBean",TestBean.class);
+        System.out.println("Bean2 : "+testBean1);
+
+        testBean.printMessage();
+        testBean1.printMessage();
+        
 
 
 
