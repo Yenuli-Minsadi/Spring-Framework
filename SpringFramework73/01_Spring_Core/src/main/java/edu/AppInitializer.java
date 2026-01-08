@@ -3,6 +3,7 @@ package edu;
 import edu.bean.SpringBean;
 import edu.bean.TestBean;
 import edu.config.AppConfig;
+import edu.newBeans.NewTestBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class AppInitializer {
@@ -29,7 +30,9 @@ public class AppInitializer {
 
         testBean.printMessage();
         testBean1.printMessage();
-        
+
+        NewTestBean newTestBean = context.getBean(NewTestBean.class);
+        System.out.println("NewTestBean : "+newTestBean);
 
 
 
